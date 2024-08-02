@@ -35,6 +35,7 @@ INSTALL_REQUIRES = [
     "accelerate >= 0.33.0, < 0.34.0",
     "diffusers >= 0.26.0, < 0.27.0",
     "huggingface_hub",
+    "datasets < 2.20.0",
 ]
 
 TESTS_REQUIRE = [
@@ -47,6 +48,7 @@ TESTS_REQUIRE = [
     "timm",
     "safetensors",
     "pytest < 8.0.0",
+    "scipy",
     "torchsde",
     "timm",
     "peft",
