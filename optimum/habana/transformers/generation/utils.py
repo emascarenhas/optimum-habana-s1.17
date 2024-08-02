@@ -101,6 +101,7 @@ MODELS_OPTIMIZED_WITH_STATIC_SHAPES = [
     "llava_next",
     "stablelm",
     "mamba",
+    "deci",
 ]
 
 
