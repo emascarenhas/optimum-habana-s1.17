@@ -36,6 +36,7 @@ INSTALL_REQUIRES = [
     "diffusers >= 0.26.0, < 0.27.0",
     "huggingface_hub",
     "datasets < 2.20.0",
+    "sentence-transformers[train] == 3.0.1",
 ]
 
 TESTS_REQUIRE = [
