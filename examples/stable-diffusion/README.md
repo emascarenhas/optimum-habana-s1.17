@@ -385,7 +385,7 @@ python text_to_image_generation.py \
 ## Inpainting
 
 Inpainting replaces or edits specific areas of an image. For more details,
-please refer to [Huging Face Diffusers doc](https://huggingface.co/docs/diffusers/en/using-diffusers/inpaint).
+please refer to [Hugging Face Diffusers doc](https://huggingface.co/docs/diffusers/en/using-diffusers/inpaint).
 
 ### Stable Diffusion Inpainting
 ```bash
@@ -514,53 +514,14 @@ python image_to_image_generation.py \
     --bf16
 ```
 
-## Inpainting Example
-
-Inpainting replaces or edits specific areas of an image. For more details,
-please refer to [Huging Face Diffusers doc](https://huggingface.co/docs/diffusers/en/using-diffusers/inpaint).
-
-### Stable Diffusion Inpainting
-```bash
-python text_to_image_generation.py \
-    --model_name_or_path  runwayml/stable-diffusion-inpainting \
-    --base_image https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/inpaint.png \
-    --mask_image https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/inpaint_mask.png \
-    --prompts "concept art digital painting of an elven castle, inspired by lord of the rings, highly detailed, 8k" \
-    --seed 0 \
-    --num_images_per_prompt 12 \
-    --batch_size 4 \
-    --image_save_dir ./inpaiting_images \
-    --use_habana \
-    --use_hpu_graphs \
-    --gaudi_config Habana/stable-diffusion
-```
-
-### Stable Diffusion XL Inpainting
-
-```bash
-python text_to_image_generation.py \
-    --model_name_or_path  diffusers/stable-diffusion-xl-1.0-inpainting-0.1\
-    --base_image https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/inpaint.png \
-    --mask_image https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/inpaint_mask.png \
-    --prompts "concept art digital painting of an elven castle, inspired by lord of the rings, highly detailed, 8k" \
-    --seed 0 \
-    --scheduler euler_discrete \
-    --num_images_per_prompt 12 \
-    --batch_size 4 \
-    --image_save_dir ./xl_inpaiting_images \
-    --use_habana \
-    --use_hpu_graphs \
-    --gaudi_config Habana/stable-diffusion
-```
-
-### Unconditional Image Generation Example
+## Unconditional Image Generation Example
 
 Here is how to perform unconditional-image-generation on Gaudi/HPU.
 
 Original unconditional image generation pipeline is shared in here: [Unconditional Image Generation](https://huggingface.co/docs/diffusers/using-diffusers/unconditional_image_generation)
 
 ```bash
-python3 unconditional_image_generation.py \
+python unconditional_image_generation.py \
     --model_name_or_path "google/ddpm-ema-celebahq-256" \
     --batch_size 16 \
     --use_habana \
